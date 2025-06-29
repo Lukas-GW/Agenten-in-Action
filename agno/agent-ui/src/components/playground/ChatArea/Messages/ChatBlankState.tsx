@@ -106,17 +106,17 @@ const ChatBlankState = () => {
 
   return (
     <section
-      className="font-geist flex flex-col items-center text-center"
+      className="font-geist flex h-full w-full flex-col items-center text-center"
       aria-label="Welcome message"
     >
-      <div className="flex max-w-3xl flex-col gap-y-8">
+      <div className="mx-auto flex w-full max-w-2xl flex-col gap-y-8">
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           className="w-full break-words px-4 text-center text-3xl font-semibold tracking-tight"
         >
-          <div className="flex items-center justify-center gap-x-2 whitespace-nowrap font-medium">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 text-balance text-center font-medium">
             <div className="flex w-full flex-col">
               <span className="break-words font-bold">Agenten in Action</span>
               <br />
