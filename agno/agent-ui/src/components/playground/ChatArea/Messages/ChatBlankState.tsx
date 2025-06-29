@@ -114,13 +114,13 @@ const ChatBlankState = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-3xl font-[600] tracking-tight"
+          className="w-full break-words px-4 text-center text-3xl font-semibold tracking-tight"
         >
           <div className="flex items-center justify-center gap-x-2 whitespace-nowrap font-medium">
             <div className="flex w-full flex-col">
-              <span className="break-words">
-                Dies ist ein Beispiel für zwei KI Agenten
-              </span>
+              <span className="break-words font-bold">Agenten in Action</span>
+              <br />
+              <span className="break-words"> </span>
               <span className="break-words">
                 eine{' '}
                 <span className="font-bold text-fuchsia-400">Reise KI</span> und
@@ -142,7 +142,7 @@ const ChatBlankState = () => {
             text="LinkedIn"
           />
           <ActionButton
-            href={'https://github.com/Lukas-GW?tab=repositories'}
+            href={'https://github.com/Lukas-GW/Agenten-in-Action'}
             variant="primary"
             text={
               <span className="flex items-center gap-2">
