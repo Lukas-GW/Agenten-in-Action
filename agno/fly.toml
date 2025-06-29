@@ -1,0 +1,38 @@
+# fly.toml app configuration file generated for agent-ki-backend on 2025-06-28T21:00:06+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'agent-ki-backend'
+primary_region = 'fra'
+
+[build]
+  dockerfile = 'Dockerfile.backend'
+
+[env]
+  PYTHONUNBUFFERED = '1'
+
+[http_service]
+  internal_port = 7777
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[services]]
+  protocol = 'tcp'
+  internal_port = 7777
+
+  [[services.ports]]
+    port = 80
+    handlers = ['http']
+
+  [[services.ports]]
+    port = 443
+    handlers = ['tls', 'http']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
